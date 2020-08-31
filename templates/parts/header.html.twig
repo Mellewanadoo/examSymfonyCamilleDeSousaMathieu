@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid bg-dark text-light" style="padding:1rem">
+  <div class="container">
+    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo du progrès">
+    <h1>{{ 'Bienvenue sur le progrès' }}</h1>
+  </div>
+</div>
+
+{% if app.user %}
+<ul class="nav nav-tabs">
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-dark" href="{{ path('article_index')}}">{{ 'Tous les articles '}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-danger" href="{{ path('article_new') }}">{{ 'Nouvel article' }}</a>
+  </li>
+</ul>
+{% endif %}
